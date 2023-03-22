@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ---
-# Screencap: Wayland Version
+# Screencap: X-Server Version 
 # Created by: Jivan RamjiSingh
 # ---
 
@@ -10,5 +10,5 @@ secondHalf=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13)
 fileName="$firstHalf-$secondHalf.png"
 fileLocation="/home/jivan/Pictures/sstemp/$fileName"
 
-grim -g "$(slurp)" "$fileLocation"
-wl-copy < "${fileLocation}"
+import -format png "${fileLocation}"
+xclip -sel c -t image/png < "${fileLocation}"

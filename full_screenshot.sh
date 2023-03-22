@@ -10,5 +10,5 @@ secondHalf=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13)
 fileName="$firstHalf-$secondHalf.png"
 fileLocation="/home/jivan/Pictures/sstemp/$fileName"
 
-grim -g "$(slurp)" "$fileLocation"
+grim "$fileLocation"
 wl-copy < "${fileLocation}"
