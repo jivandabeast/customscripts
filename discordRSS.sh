@@ -1,4 +1,6 @@
 #!/bin/bash
 
 cd /home/jivan/Documents/Projects/discordRSS
-.venv/bin/python discordRSS.py >> output.log
+source .venv/bin/activate
+python3 discordRSS.py >> output.log
+deactivate
